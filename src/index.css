@@ -1,0 +1,422 @@
+/* General */
+
+body {
+    background: #f5f6f8;
+    font-family: 'Eina W01', sans-serif;
+}
+
+.navbar-header {
+    background: white;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .08), 0 4px 16px 0 rgba(0, 0, 0, .1);
+    position: relative;
+    z-index: 100;
+}
+
+.weather-clock {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    margin-bottom: 32px;
+}
+
+.divider {
+    width: 1px;
+    background: rgba(0, 0, 0, .1);
+    margin: 1rem 3rem;
+}
+
+.btn,
+.form-control {
+    padding-bottom: .45rem;
+}
+
+.btn-shadow {
+    border-color: #ced4da !important;
+    box-shadow: 0 2px 4px 0 rgba(14,30,37,.12);
+    background-color: white;
+}
+
+.btn-shadow:hover,
+.btn-shadow:focus {
+    background-color: #f5f5f5;
+    box-shadow: 0 8px 12px 0 rgba(233,235,235,.16), 0 2px 8px 0 rgba(0,0,0,.08);
+}
+
+.btn-shadow:not(:disabled):not(.disabled).active,
+.btn-shadow:not(:disabled):not(.disabled):active,
+.show>.btn-shadow.dropdown-toggle {
+    box-shadow: none;
+    background-color: #f5f5f5;
+}
+
+.btn-shadow:disabled {
+    border-color: #ced4da;
+}
+
+/* Clock */
+
+.clock-time {
+    font-size: 64px;
+    font-weight: bold;
+}
+
+.clock-date {
+    font-size: 24px;
+    margin-bottom: 0;
+}
+
+/* Trello and Calendar */
+
+.trello-wrap {
+    margin: 0;
+    padding: 0;
+}
+
+.trello-card,
+.calendar-card {
+    background: white;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+    padding: 16px;
+    display: block;
+    color: #212529;
+    transition: background-color 0.25s ease-in-out;
+}
+
+.trello-wrap {
+    position: relative;
+}
+
+.trello-heading,
+.calendar-heading {
+    margin-bottom: 16px;
+    color: #212529;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.trello-header,
+.calendar-header {
+    display: block;
+}
+
+.trello-name,
+.calendar-name {
+    margin-right: 8px;
+    margin-bottom: 0;
+    display: inline-block;
+}
+
+a {
+    color: #212529;
+}
+
+a:hover {
+    color: #212529;
+    text-decoration: underline;
+}
+
+.trello-due,
+.calendar-due {
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+.trello-labels {
+    display: block;
+    overflow: auto;
+    position: relative;
+}
+
+.trello-label {
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0 3px 3px 0;
+    min-width: 42px;
+    text-shadow: none;
+    width: auto;
+    border-radius: 3px;
+    color: white;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    height: 16px;
+    line-height: 16px;
+    padding: 0 8px;
+    max-width: 198px;
+    float: left;
+}
+
+.trello-label-green {background-color: #61bd4f;}
+.trello-label-orange {background-color: #ffab4a;}
+.trello-label-blue {background-color: #0079bf;}
+.trello-label-sky {background-color: #00c2e0;}
+.trello-label-pink {background-color: #ff80ce;}
+.trello-label-yellow {background-color: #61bd4f;}
+.trello-label-red {background-color: #eb5a46;}
+.trello-label-purple {background-color: #c377e0;}
+.trello-label-lime {background-color: #51e898;}
+.trello-label-black {background-color: #4d4d4d;}
+
+.trello-check-item {
+    margin-top: 8px;
+}
+
+.trello-list-loading,
+.calendar-list-loading {
+    margin-bottom: 16px;
+}
+
+.trello-add {
+    margin-bottom: 24px;
+}
+
+.trello-add-group {
+    width: 100% !important;
+}
+
+.trello-add-input {
+    border-color: #ced4da;
+    flex: 1;
+    margin-right: 1rem;
+}
+
+.trello-buttons {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    z-index: 10;
+}
+
+.trello-buttons .btn {
+    font-size: 1rem;
+    line-height: 1;
+    padding: .5rem;
+}
+
+.trello-buttons .btn:hover,
+.trello-buttons .btn:active {
+    background: #f5f7fa;
+}
+
+.trello-description {
+    padding-top: 8px;
+    display: block;
+}
+
+/* Weather */
+
+.weather {
+    flex: 1 1;
+    display: flex;
+    align-items: center;
+}
+
+.weather-graphic {
+    display: inline-block;
+    margin: 3px 16px 3px 0;
+    width: 60px;
+    height: 60px;
+}
+
+.weather-wrap {
+    display: inline-block;
+}
+
+.weather-current {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 36px;
+    margin-right: 8px;
+}
+
+.weather-min-max {
+    font-size: 24px;
+}
+
+.weather-summary {
+    display: block;
+}
+
+/* Calendar */
+
+.calendar-card.today .calendar-date,
+.calendar-card.current .calendar-due {
+    color: #007bff;
+}
+
+.calendar-card.past {
+    opacity: 0.6;
+}
+
+.calendar-location {
+    color: #6c757d;
+}
+
+/* Settings */
+
+.settings-cog {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+}
+
+.search-container {
+    position: relative;
+}
+
+.search-dropdown-container {
+    background: white;
+    box-shadow: 0 4px 10px #ced4da;
+    border-radius: 4px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate3d(0px, 40px, 0px);
+    width: 100%;
+    z-index: 1000;
+    min-width: 10rem;
+}
+
+.search-item {
+    padding: 8px 12px;
+    text-align: left;
+    background-color: white;
+    cursor: pointer;
+    border-bottom: 1px solid #ced4da;
+}
+
+.search-item-active {
+    color: #f8f9fa;
+    background: #007bff;
+}
+
+.trello,
+.calendar,
+.section-card {
+    margin-top: 32px;
+}
+
+.settings-form {
+    background: white;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .08), 0 4px 16px 0 rgba(0, 0, 0, .1);
+    padding: 24px;
+    border-radius: 8px;
+    margin-bottom: 32px;
+    margin-top: 16px;
+}
+
+
+/* Small Breakpoint */
+
+@media (max-width: 767px) {
+    .clock-date {
+        font-size: 16px;
+    }
+
+    .divider {
+        margin: 1rem;
+    }
+
+    .weather-graphic {
+        display: none;
+        visibility: hidden;
+    }
+
+    .weather-current,
+    .clock-time {
+        font-size: 24px;
+    }
+
+    .weather-min-max {
+        font-size: 16px;
+    }
+
+    .weather-clock {
+        margin-bottom: 0;
+    }
+
+    .form-inline .form-group {
+        display: flex;
+        flex: 0 0 auto;
+        flex-flow: row wrap;
+        align-items: center;
+        margin-bottom: 0;
+    }
+
+    .settings-form {
+        padding: 16px;
+        margin-top: 16px;
+        margin-bottom: 32px;
+        box-shadow: none;
+        border: 1px solid #ced4da;
+    }
+
+    .trello-list,
+    .calendar-list {
+        background: white;
+        margin-bottom: 16px;
+        border: 1px solid #ced4da;
+        border-radius: 8px;
+    }
+
+    .trello-card,
+    .calendar-card {
+        margin-bottom: 0;
+        background: none;
+        border: none;
+        border-radius: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .trello-wrap,
+    .calendar-wrap {
+        border-bottom: 1px solid #ced4da;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    .trello-wrap:last-child,
+    .calendar-wrap:last-child {
+        border-bottom: none;
+    }
+
+    .trello-name,
+    .calendar-name {
+        font-size: 1.25rem;
+        font-weight: 400;
+    }
+
+    .trello-add-input {
+        margin-right: 0.5rem;
+    }
+
+    .trello-buttons {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+/* Not Medium Breakpoint */
+
+@media (min-width: 1024px) {
+    .weather-loading {
+        margin-top: 3.5rem;
+    }
+}
+
+/* Not Small Breakpoint */
+
+@media (min-width: 768px) {
+    .trello,
+    .calendar {
+        background: white;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .08), 0 4px 16px 0 rgba(0, 0, 0, .1);
+        padding: 24px;
+        border-radius: 8px;
+        margin-bottom: 32px;
+        padding-bottom: 1px;
+    }
+}
